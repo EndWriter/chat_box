@@ -1,20 +1,28 @@
-#Python pour BACK
+# Python
 FROM python:3.13-slim
 
-# répertoire de travail dans le conteneur
+# Définit le répertoire de travail
 WORKDIR /app
 
-#copie les bibliothèques
+# Installe les dépendances système nécessaires
+RUN apt-get update && apt-get install -y \
+    gcc \
+    postgresql-client \
+    libpq-dev \
+    python3-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copie les requirements
 COPY requirements.txt .
 
-# installe les biblio depuuis requirements.txt
+# Installe les dépendances
 RUN pip install --no-cache-dir -r requirements.txt
 
-# fais une copie de tout le code du backend
+# copie le code
 COPY . .
 
-#port 8000 pour Django (utile pour django par la suite)
+# Expose le port 8000
 EXPOSE 8000
 
-#start Django 
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+# Test des migrations et démarrage du serveur
+CMD ["sh", "-c", "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"]
