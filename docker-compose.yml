@@ -34,12 +34,12 @@ services:
   #Front
   frontend:
     build:
-      context: ./frontend
+      context: ./chatbox_project_front
       dockerfile: Dockerfile
     ports:
       - "3000:3000"
     volumes:
-      - ./frontend:/app
+      - ./chatbox_project_front:/app
       - /app/node_modules
     depends_on:
       - backend
