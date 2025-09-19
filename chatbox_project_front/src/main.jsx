@@ -5,6 +5,7 @@ import Footer from './footers.jsx'
 import Carousel from './carousel.jsx'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './assets/css/App.css'
 import './assets/css/index.css'
 import './assets/css/style.css'
