@@ -1,6 +1,6 @@
-import './assets/css/style.css'
-import './assets/css/carousel.css'
-import './assets/css/custom.css'
+import '../assets/css/style.css'
+import '../assets/css/carousel.css'
+import '../assets/css/custom.css'
 import {Container} from "react-bootstrap"
 
 export default function Footer(){

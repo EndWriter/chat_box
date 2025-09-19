@@ -1,5 +1,5 @@
-import chaussure from './assets/chaussure.jpg';
-import chaussures from './assets/chaussures.jpg';
+import chaussure from '../assets/images/chaussure.jpg';
+import chaussures from '../assets/images/chaussures.jpg';
 
 export default function Carousel(){
   return (
