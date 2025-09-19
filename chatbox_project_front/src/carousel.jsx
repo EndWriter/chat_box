@@ -1,3 +1,4 @@
+import chaussure from './assets/chaussure.jpg';
 
 export default function Carousel(){
     return (
@@ -9,7 +10,11 @@ export default function Carousel(){
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <svg className="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+                 <img
+                    src={chaussure}
+                    className="d-block w-100" width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"
+                    alt="Chaussure du magasin"
+                />
                 <div className="container">
                     <div className="carousel-caption text-start">
                         <h1>Promotion jusqu'à -50%</h1>
