@@ -1,0 +1,12 @@
+h2 {
+    text-align: center;
+    padding-top: 2%;
+}
+
+form {
+    max-width: 400px;
+    margin: 2% auto;
+    padding: 2%;
+    border: black 2px solid;
+    width: 100%;
+}

@@ -4,6 +4,7 @@ import { Chat } from "../components/Chat/Chat";
 import { Controls } from "../components/Controls/Controls";
 import { Loader } from "../components/Loader/loader";
 import styles from "../assets/css/App.module.css";
+import '../assets/css/chatbot.css';
 import Header from "../components/Header.jsx";
 import Footer from "../components/Footers.jsx";
 
@@ -38,20 +39,15 @@ function Chatbot() {
 
   return (
     <>
-    <Header/>
-    <div className={styles.App}>
+      <Header/>
       {loading && <Loader />}
-
-      <header className={styles.Header}>
-        <img className={styles.Logo} src="/chat-bot.png" alt="logo" />
-        <h2 className={styles.Title}>AI Chatbot</h2>
-      </header>
-      <div className={styles.ChatContainer}>
+      <h2>FAQ</h2>
+      <div className="ChatContainer">
         <Chat messages={messages} />
+        <Controls onSend={handleContentSend} disabled={loading} />
       </div>
-      <Controls onSend={handleContentSend} disabled={loading} />
-    </div>
-    <Footer/>
+      
+      <Footer/>
     </>
   );
 }

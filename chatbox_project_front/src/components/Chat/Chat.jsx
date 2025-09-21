@@ -3,7 +3,7 @@ import styles from "./Chat.module.css";
 
 const WELCOME_MESSAGE = {
   role: "assistant",
-  content: "Bienvenue sur notre chatbot, que puis-je faire pour vous ?",
+  content: "Des questions sur nos produits ou nos commandes ? Posez-votre question à notre chatbot !",
 };
 
 export function Chat({ messages }) {

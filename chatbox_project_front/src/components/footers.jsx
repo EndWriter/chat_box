@@ -7,7 +7,7 @@ import '../assets/css/footer.css'
 export default function Footer(){
     return (
     <footer className="bg-dark text-white py-3 fixed-bottom">
-            <p>&copy; 2017–2025 Shoes King <a href="#">CGV</a> <a href="#">CGU</a></p>
+            <p>&copy; 2017–2025 Shoes King</p>
     </footer>
     )
 }

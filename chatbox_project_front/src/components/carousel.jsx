@@ -12,7 +12,7 @@ export default function Carousel(){
             <div className="carousel-caption">
               <h1>Promotion jusqu'à -50%</h1>
               <p>Votre première paire achetée à -25% et la deuxième à -50% !</p>
-              <p><a className="btn btn-lg btn-primary" href="/user">Inscrivez-vous</a></p>
+              <p><a className="btn btn-lg btn-primary" href="/login">Inscrivez-vous</a></p>
             </div>
           </div>
         </div>
@@ -23,7 +23,7 @@ export default function Carousel(){
             <div className="carousel-caption">
               <h1>Promotion jusqu'à -50%</h1>
               <p>Votre première paire achetée à -25% et la deuxième à -50% !</p>
-              <p><a className="btn btn-lg btn-primary" href="/user">Inscrivez-vous</a></p>
+              <p><a className="btn btn-lg btn-primary" href="/login">Inscrivez-vous</a></p>
             </div>
           </div>
         </div>

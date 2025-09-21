@@ -2,18 +2,19 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import Header from '../components/Header.jsx'
 import Footer from '../components/Footers.jsx'
-import Carousel from '../components/Carousel.jsx'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import '../assets/css/style.css'
-import '../assets/css/carousel.css'
 
-export default function Home(){
+export default function NotFound(){
   return(
     <>
       <Header/>
-      <Carousel />
+        <div style={{ textAlign: "center", marginTop: "4rem" }}>
+            <h1>404 - Page non trouvée</h1>
+            <p>La page que vous cherchez n'existe pas.</p>
+        </div>
       <Footer />
     </>
   );

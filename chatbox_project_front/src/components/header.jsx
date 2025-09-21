@@ -20,8 +20,8 @@ return (
                 <ul className="navbar-nav me-auto mb-2 mb-md-0">
                 </ul>
                 <div className="speed-menu">
-                    <a href=""><i data-feather="user"></i></a>
-                    <a href=""><i data-feather="shopping-cart"></i></a>
+                    <a href="/login"><i data-feather="user"></i></a>
+                    <a href="/command"><i data-feather="shopping-cart"></i></a>
                     <a href="/chatbot"><i data-feather="help-circle"></i></a>
                 </div>
             </div>
