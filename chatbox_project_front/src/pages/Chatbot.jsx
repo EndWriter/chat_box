@@ -1,20 +1,59 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import Header from '../components/Header.jsx'
-import Footer from '../components/Footers.jsx'
+import { useState } from "react";
+import { Assistant } from "../assistants/openai";
+import { Chat } from "../components/Chat/Chat";
+import { Controls } from "../components/Controls/Controls";
+import { Loader } from "../components/Loader/loader";
+import styles from "../assets/css/App.module.css";
+import Header from "../components/Header.jsx";
+import Footer from "../components/Footers.jsx";
 
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import '../assets/css/App.css'
-import '../assets/css/index.css'
-import '../assets/css/style.css'
+const MESSAGES = [];
 
+function Chatbot() {
+  const assistant = new Assistant();
+  const [messages, setMessages] = useState(MESSAGES);
+  const [loading, setLoading] = useState(false);
 
-export default function Chatbot() {
+  function addMessage(message) {
+    setMessages((prevMessages) => [...prevMessages, message]);
+  }
+
+  async function handleContentSend(content) {
+    addMessage({ content, role: "user" });
+    setLoading(true);
+
+    try {
+      const response = await assistant.chat(content, messages);
+      addMessage({ content: response, role: "assistant" });
+    } catch (error) {
+      console.error("Erreur Gemini :", error);
+      addMessage({
+        content: "Désolé, je n'ai pas pu traiter votre demande.",
+        role: "system",
+      });
+    } finally {
+      setLoading(false);
+    }
+  }
+
   return (
-  <StrictMode>
+    <>
     <Header/>
-    <Footer />
-  </StrictMode>
+    <div className={styles.App}>
+      {loading && <Loader />}
+
+      <header className={styles.Header}>
+        <img className={styles.Logo} src="/chat-bot.png" alt="logo" />
+        <h2 className={styles.Title}>AI Chatbot</h2>
+      </header>
+      <div className={styles.ChatContainer}>
+        <Chat messages={messages} />
+      </div>
+      <Controls onSend={handleContentSend} disabled={loading} />
+    </div>
+    <Footer/>
+    </>
   );
 }
+
+export default Chatbot;

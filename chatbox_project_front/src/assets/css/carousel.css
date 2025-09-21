@@ -2,19 +2,25 @@
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
+#myCarousel,#myCarousel .carousel-item {
+  height: 90vh; /* prend toute la hauteur de la fenêtre */
+}
+
+#myCarousel .carousel-item img {
+  height: 90vh;       /* force l’image à prendre toute la hauteur */
+  object-fit: cover;   /* recadre l’image sans la déformer */
+}
+
 body {
     padding-top: 3rem;
     padding-bottom: 3rem;
     color: rgb(var(--bs-tertiary-color-rgb));
 }
 
-
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
 /* Carousel base class */
-
-
 
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -27,6 +33,11 @@ body {
     height: 33rem;
 }
 
+.carousel-item img {
+    max-height:100%;
+    width:auto;
+    object-fit: cover;
+}
 
 /* MARKETING CONTENT
 -------------------------------------------------- */

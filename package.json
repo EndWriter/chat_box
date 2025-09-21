@@ -3,7 +3,11 @@
     "bootstrap": "^5.3.8",
     "feather-icons": "^4.29.2",
     "react-bootstrap": "^2.10.10",
-    "react-router-dom": "^6.17.0"
-
+    "react-router-dom": "^6.17.0",
+    "@google/generative-ai": "^0.24.1",
+    "openai": "^5.21.0",
+    "react-markdown": "^10.1.0",
+    "react-textarea-autosize": "^8.5.9",
+    "react-dom": "^19.1.1"
   }
 }

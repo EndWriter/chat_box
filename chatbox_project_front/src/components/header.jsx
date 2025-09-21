@@ -12,7 +12,7 @@ return (
 <header data-bs-theme="dark">
     <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div className="container-fluid">
-            <a className="navbar-brand" href="#">Shoes King</a>
+            <a className="navbar-brand" href="/home">Shoes King</a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>
@@ -22,7 +22,7 @@ return (
                 <div className="speed-menu">
                     <a href=""><i data-feather="user"></i></a>
                     <a href=""><i data-feather="shopping-cart"></i></a>
-                    <a href=""><i data-feather="help-circle"></i></a>
+                    <a href="/chatbot"><i data-feather="help-circle"></i></a>
                 </div>
             </div>
         </div>
